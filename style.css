@@ -1,0 +1,222 @@
+/* Basic Reset and Variables */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #343a40;
+  --background-color: #f8f9fa;
+  --card-background: #ffffff;
+  --text-color: #212529;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* --- Navbar Styling --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: var(--secondary-color);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--primary-color);
+}
+
+/* --- Hero Section (Home) --- */
+.hero {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://picsum.photos/1600/900") center/cover no-repeat;
+  color: white;
+}
+
+.hero-content {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+.greeting {
+  font-size: 1.5rem;
+}
+
+.name {
+  font-size: 4rem;
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+.animated-text {
+  font-size: 2rem;
+  font-weight: 300;
+  min-height: 2.5rem;
+}
+
+/* --- Social Icons --- */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* --- General Section Styling --- */
+.section {
+  padding: 80px 5%;
+  min-height: 50vh;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  border-bottom: 3px solid var(--primary-color);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* --- Skills Section --- */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skill-card {
+  background-color: var(--card-background);
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Projects Section --- */
+.projects-section {
+  background-color: #e9ecef;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  background-color: var(--card-background);
+  padding: 25px;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Add this to style.css */
+.animated-text.blinking {
+  border-right: 3px solid white; /* Simulates a blinking cursor */
+}
+
+/* --- Footer --- */
+footer {
+  padding: 20px;
+  text-align: center;
+  background-color: var(--secondary-color);
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .navbar nav {
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    margin: 0 10px;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .animated-text {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 60px 5%;
+  }
+}
